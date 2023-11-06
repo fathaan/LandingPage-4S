@@ -25,7 +25,7 @@ header.navbar{
     border-radius: 10px;
     
     padding-block: 1rem;
-    z-index: 999;
+    z-index: 99;
 }
 header.navbar .navbarLogo img {
     border-radius: 15px;
@@ -128,12 +128,13 @@ main aside {
     inset-inline-end: 0;
 }
    
-  main aside .sosmed {
+main aside .sosmed {
     height: 100%;
     display: flex;
+    z-index: 100;
 }
    
-  main aside .sosmed ul {
+main aside .sosmed ul {
     padding: 1.5rem 1rem;
     margin: auto;
     border-top-left-radius: 12px;
@@ -147,7 +148,7 @@ main aside {
     gap: 1.5rem;
 }
    
-  main aside .sosmed li {
+main aside .sosmed li {
     list-style-type: none;
 }
 main aside .sosmed li a {
@@ -162,3 +163,35 @@ main aside .sosmed li a {
   }
 
   /* __________ __________ __________ */
+
+  /* Medium Devices ( Lanscape Tablet [768px - 0px] ) */
+  @media screen and (max-width: 768px) {
+    header.navbar {
+        flex-direction: column;
+    }
+    header.navbar .navbarList ul {
+       flex-wrap: wrap;
+       column-gap: .5rem;
+    }
+    main {
+        padding: 1rem 3rem;
+    }
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    main .content .tulisan .title {
+        font-size: 3rem;
+    }
+     
+    main .content .tulisan p {
+        font-size: 1rem;
+    }
+     
+    main .content .logoBrand {
+        order: -1;
+    }
+    main .content .tulisan button{
+        font-size: 12px;
+    }
+  }
